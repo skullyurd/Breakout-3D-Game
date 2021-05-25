@@ -5,20 +5,18 @@ using UnityEngine.UI;
 public class CM : MonoBehaviour
 {
 
-    public int Lives = 3;
-    public int bricks = 30;
-    public float resetDelay = 1f;
-    public Text livesText;
-    public GameObject GameOver;
-    public GameObject YouWon;
-    public GameObject bricksPrefab;
-    public GameObject paddle;
-    public GameObject DeathParticles;
+    [SerializeField] private int Lives = 3;
+    [SerializeField] private int bricks = 30;
+    [SerializeField] private float resetDelay = 1f;
+    [SerializeField] private Text livesText;
+    [SerializeField] private GameObject GameOver;
+    [SerializeField] private GameObject YouWon;
+    [SerializeField] private GameObject bricksPrefab;
+    [SerializeField] private GameObject paddle;
+    [SerializeField] private GameObject DeathParticles;
     public static CM instance = null;
 
     private GameObject clonepaddle;
-
-    // Use this for initialization
     void Start()
     {
         if (instance == null)
@@ -27,7 +25,6 @@ public class CM : MonoBehaviour
             Destroy(gameObject);
 
         Setup();
-
     }
 
     public void Setup()
@@ -41,7 +38,6 @@ public class CM : MonoBehaviour
         if (bricks < 1)
         {
             YouWon.SetActive(true);
-
             Time.timeScale = .25f;
             Invoke("Reset", resetDelay);
         }
@@ -49,7 +45,6 @@ public class CM : MonoBehaviour
         if (Lives < 1)
         {
             GameOver.SetActive(true);
-
             Time.timeScale = .25f;
             Invoke("Reset", resetDelay);
         }
@@ -81,7 +76,4 @@ public class CM : MonoBehaviour
         bricks--;
         CheckGameOver();
     }
-
-    
-
 }

@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9c824567e4869a41b150235e708dccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballInitialVelocity: 600
+  ballInitialVelocity: 1000
 --- !u!1 &1968840452812938
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,4 +244,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b28f14e5bd8612c4787621f081b80587, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paddleSpeed: 0.4
+  paddleSpeed: 1
